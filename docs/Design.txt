@@ -1,0 +1,9 @@
+All Cards : 108
+    2 number cards from 1 to 9 and one number card of 0 for four colors :  76 cards
+    2 skip ,2 reverse ,2 draw 2 cards for four colors : 24 cards (76 + 24 = 100)
+    4 draw 4 cards and 4 wild cards = 8 (76 + 24 + 8 = 108)
+
+Componenets: 
+    Player -> Handles player actions (Play or Draw or Auto Draw)
+    Computer -> Handles computers action (Play or draw)
+    Deck -> Handles the drawing of cards and verification of plays of Player and Computer
