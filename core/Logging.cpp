@@ -52,7 +52,7 @@ std::ostream& purple(std::ostream& os){
 }
 #endif
 
-void printCard(Card& card){
+void printCard(const Card& card){
     std::unordered_map<char,std::string> identifierToName = {
         {'0',"Number 0"},
         {'1',"Number 1"},

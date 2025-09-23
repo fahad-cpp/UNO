@@ -8,5 +8,7 @@ class Deck{
     std::vector<Card> cards;
     Deck(bool empty = false);
     void shuffle();
+    std::vector<Card> drawCards(int count);
+    int verify(Card card);
 };
 #endif

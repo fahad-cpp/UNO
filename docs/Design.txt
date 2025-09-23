@@ -7,3 +7,4 @@ Componenets:
     Player -> Handles player actions (Play or Draw or Auto Draw)
     Computer -> Handles computers action (Play or draw)
     Deck -> Handles the drawing of cards and verification of plays of Player and Computer
+    Game -> Handles Menu printing and handles the above three componenets

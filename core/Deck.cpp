@@ -138,13 +138,11 @@ Deck::Deck(bool empty){
     };
     LOG("Deck initialized\n");
     shuffle();
-    for(Card& card : cards){
-        printCard(card);
-        std::cout << "\n";
-    }
+    LOG("Deck Shuffled\n");
 }
 
 void Deck::shuffle(){
+    //get unique 108 random numbers from 0 to 107
     std::vector<int> uniqueRandoms;
     for(int i=0;i<108;i++){
         int num = rand() % 108;
@@ -160,10 +158,27 @@ void Deck::shuffle(){
             uniqueRandoms.push_back(num);
         }
     }
+    //Shuffle with those numbers
     std::vector<Card> shuffledCards(108);
     for(int i=0;i<108;i++){
         shuffledCards[i] = cards[uniqueRandoms[i]];
     }
     cards = shuffledCards;
-    LOG("Cards Shuffled\n");
+}
+
+std::vector<Card> Deck::drawCards(int count){
+    if(count < 1 || (count > this->cards.size())){
+        LOG_WARN("Invalid drawing amount in drawCard call (No cards drawn):"<<count);
+        return {};
+    }
+    std::vector<Card> drawnCards;
+    for(int i=0;i<count;i++){
+        drawnCards.push_back(this->cards.back());
+        this->cards.pop_back();
+    }
+    return drawnCards;
+}
+
+int Deck::verify(Card card){
+    return 1;
 }
