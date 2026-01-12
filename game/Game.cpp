@@ -22,6 +22,7 @@ void Game::resetGame(){
     computer = new Computer();
 }
 void Game::printStatus(){
+    std::cout << "\nq:quit\n";
     std::cout << "----------------Your-Cards----------------\n";
     player->printCards();
 }

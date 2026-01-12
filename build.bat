@@ -5,6 +5,7 @@ if not exist build (
     exit
 )
 cd build
+if not exist CMakeCache.txt cmake ..
 cmake --build .
 echo Program output:
 Uno.exe
